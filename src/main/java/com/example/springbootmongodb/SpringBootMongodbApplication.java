@@ -10,14 +10,7 @@ import org.springframework.context.ApplicationContext;
 public class SpringBootMongodbApplication {
 
 	public static void main(String[] args) {
-		ApplicationContext context=SpringApplication.run(SpringBootMongodbApplication.class, args);
-		BookRepo bookRepo = context.getBean(BookRepo.class);
-
-		Book book = new Book();
-		book.setId(2);
-		book.setBookName("Java cookbook");
-		book.setAuthorName("Barry baurd");
-		bookRepo.save(book);
+		SpringApplication.run(SpringBootMongodbApplication.class, args);
 	}
 
 }
